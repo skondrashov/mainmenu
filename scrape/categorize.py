@@ -7,7 +7,6 @@ KEYWORD_TO_CATEGORY = {
     "analytics": "Monitoring & Metrics",
     "cms": "Content Management Systems",
     "ci-cd": "CI/CD Tools",
-    "ci": "CI/CD Tools",
     "continuous-integration": "CI/CD Tools",
     "docker": "Container Orchestration",
     "kubernetes": "Container Orchestration",
@@ -16,14 +15,21 @@ KEYWORD_TO_CATEGORY = {
     "git": "Version Control",
     "vim": "Code Editors",
     "neovim": "Code Editors",
-    "editor": "Code Editors",
+    "source-code-editor": "Code Editors",
     "ide": "Code Editors",
     "text-editor": "Code Editors",
+    "code-editor": "Code Editors",
     "database": "Databases",
     "sql": "Databases",
     "orm": "ORMs",
-    "proxy": "VPN",
+    "proxy": "Networking",
     "vpn": "VPN",
+    "networking": "Networking",
+    "tcp": "Networking",
+    "udp": "Networking",
+    "dns": "Networking",
+    "protocol": "Networking",
+    "network-library": "Networking",
     "email": "Email",
     "smtp": "Email",
     "chat": "Communication",
@@ -65,7 +71,7 @@ KEYWORD_TO_CATEGORY = {
     "shell": "Shell Environments",
     "screenshot": "Screenshot & Annotation",
     "clipboard": "Clipboard Managers",
-    "browser": "Browsers",
+    "web-browser": "Browsers",
     "torrent": "Torrent Clients",
     "bittorrent": "Torrent Clients",
     "pdf": "PDF Tools",
@@ -123,7 +129,7 @@ KEYWORD_TO_CATEGORY = {
     "terraform": "Infrastructure as Code",
     "ansible": "Infrastructure as Code",
     "package-manager": "Package Managers",
-    "cloud": "Cloud SDKs & CLIs",
+    "cloud-sdk": "Cloud SDKs & CLIs",
     "aws": "Cloud SDKs & CLIs",
     "gcp": "Cloud SDKs & CLIs",
     "azure": "Cloud SDKs & CLIs",
@@ -141,7 +147,8 @@ KEYWORD_TO_CATEGORY = {
     "vector-search": "Vector Databases",
     "window-manager": "Window Managers",
     "tiling": "Window Managers",
-    "launcher": "Launcher & Productivity Utils",
+    "app-launcher": "Launcher & Productivity Utils",
+    "spotlight-alternative": "Launcher & Productivity Utils",
     "operating-system": "Operating Systems",
     "linux-distribution": "Operating Systems",
     "distro": "Operating Systems",
@@ -174,8 +181,9 @@ KEYWORD_TO_CATEGORY = {
     "error-handling": "Error Handling",
     "async": "Async & Concurrency",
     "concurrency": "Async & Concurrency",
-    "date": "Date & Time",
     "datetime": "Date & Time",
+    "date-time": "Date & Time",
+    "date-util": "Date & Time",
     "notebook": "Jupyter & Notebooks",
     "jupyter": "Jupyter & Notebooks",
     "scientific": "Scientific Computing",
@@ -239,13 +247,44 @@ KEYWORD_TO_CATEGORY = {
     "numerics": "Math & Numerics",
     "linear-algebra": "Math & Numerics",
     "web-framework": "Backend Frameworks",
+    "ai-assistant": "AI Assistants",
+    "chatbot": "AI Assistants",
+    "ai-copilot": "AI Assistants",
+    "llm-client": "AI Assistants",
+    "llm-interface": "AI Assistants",
+    "task-runner": "Task Runners & Monorepos",
+    "monorepo": "Task Runners & Monorepos",
+    "build-automation": "Task Runners & Monorepos",
+}
+
+
+STOP_WORDS = {
+    "the", "and", "for", "with", "that", "this", "from", "your", "are",
+    "was", "were", "been", "have", "has", "had", "not", "but", "all",
+    "can", "will", "one", "more", "also", "than", "them", "its", "into",
+    "most", "other", "some", "such", "use", "her", "him", "how", "man",
+    "new", "now", "old", "see", "way", "who", "did", "get", "let", "say",
+    "she", "too", "any", "each", "which", "their", "there", "what", "about",
+    "would", "make", "like", "just", "over", "these", "after", "could",
+    "should", "when", "where", "being", "those", "then", "them", "been",
+    "many", "very", "only", "come", "made", "find", "here", "thing",
+    "give", "using", "used", "based", "open", "source", "free", "tool",
+    "tools", "app", "apps", "library", "simple", "fast", "easy",
+    "written", "built", "support", "supports", "lightweight", "powerful",
+    "modern", "cross", "platform", "project", "application", "provides",
+    "client", "server", "file", "files", "data", "code", "system",
+    "line", "command", "framework", "plugin", "interface", "manager",
+    "multiple", "management", "development", "high", "performance",
 }
 
 
 def build_category_index():
-    """Build keyword frequency index from existing entries."""
+    """Build keyword frequency index from curated entries only."""
     cat_keywords = defaultdict(Counter)
     for path in glob.glob(os.path.join(DATA_DIR, "*.json")):
+        # Skip scraped data — only use curated files to avoid feedback loops
+        if "discovered" in os.path.basename(path):
+            continue
         with open(path, encoding="utf-8") as f:
             entries = json.load(f)
         for entry in entries:
@@ -253,10 +292,13 @@ def build_category_index():
             if not cat:
                 continue
             for tag in entry.get("tags", []):
-                cat_keywords[cat][tag.lower()] += 1
+                t = tag.lower()
+                if t not in STOP_WORDS:
+                    cat_keywords[cat][t] += 1
             desc = entry.get("description", "")
             for word in re.findall(r'[a-z]{3,}', desc.lower()):
-                cat_keywords[cat][word] += 1
+                if word not in STOP_WORDS:
+                    cat_keywords[cat][word] += 1
     return cat_keywords
 
 
@@ -302,22 +344,50 @@ def categorize(entry, category_index=None):
     if best_cat:
         return best_cat
 
+    # Categories that should NEVER be assigned via Tier 3 — too much overlap
+    # with generic English words. Only section map or Tier 1/2 can assign these.
+    TIER3_EXCLUDED = {
+        "Desktop App Frameworks",  # "desktop" matches every macOS app
+        "Mobile IDE & Tools",      # "ios"/"debugging" matches all iOS libs
+    }
+
     # Tier 3: Score against category index (normalized by category size)
     if category_index:
         scores = {}
         tokens = set(topics + re.findall(r'[a-z]{3,}', all_text))
         for cat, keywords in category_index.items():
+            if cat in TIER3_EXCLUDED:
+                continue
             raw = sum(keywords.get(t, 0) for t in tokens)
             if raw > 0:
                 # Normalize by total keyword count to prevent large categories
                 # from dominating via sheer volume of common words
                 total = sum(keywords.values())
                 score = raw / (total ** 0.5) if total > 0 else raw
-                # Extra penalty for known catch-all categories
+                # Penalize categories that attract junk via common words
                 if cat in ("Utilities", "System Utilities"):
                     score *= 0.3
+                elif cat in ("AI Assistants", "Cloud SDKs & CLIs",
+                             "Task Runners & Monorepos"):
+                    score *= 0.5
+                elif cat in ("HR & People", "Chess", "Flashcards & Study",
+                             "Error Handling", "Statistical Tools",
+                             "Mobile IDE & Tools"):
+                    score *= 0.3  # Small categories vulnerable to stop-word dominance
+                elif cat in ("Desktop App Frameworks",):
+                    score *= 0.3  # "desktop" keyword attracts generic apps
+                elif cat in ("Code Editors",):
+                    score *= 0.5  # "editor" matches non-code-editors
+                elif cat in ("Data Analysis",):
+                    score *= 0.5  # "data"/"visualization" too broad
+                elif cat in ("Date & Time", "Browsers"):
+                    score *= 0.5  # Broad keywords attract junk
                 scores[cat] = score
         if scores:
-            return max(scores, key=scores.get)
+            best = max(scores, key=scores.get)
+            # Require minimum confidence to avoid random assignment
+            if scores[best] < 0.15:
+                return None
+            return best
 
     return None

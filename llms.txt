@@ -1,5 +1,5 @@
 # main.menu
-> Universal software directory with 16337 entries across 128 categories. Structured data for AI agents and developers.
+> Universal software directory with 15555 entries across 123 categories. Structured data for AI agents and developers.
 
 ## Endpoints
 - Full catalog (JSON): /api/v1/catalog.json
@@ -15,134 +15,129 @@ Pricing: free | freemium | paid | subscription
 OS: windows | macos | linux | web | ios | android
 
 ## Categories
-- AI Assistants: 579
-- Cloud SDKs & CLIs: 558
-- Static Analysis: 526
-- iOS UI Components: 512
-- Databases: 396
-- CLI Frameworks: 372
-- Code Editors: 349
-- Task Runners & Monorepos: 344
-- Auth & Identity: 325
-- Testing Frameworks: 298
-- Backend Frameworks: 297
-- Data Analysis: 286
-- Communication: 278
-- CI/CD Tools: 276
-- Container Orchestration: 274
-- Frontend Frameworks: 272
-- Image Processing: 268
-- Note Taking: 257
-- VPN: 255
-- Backup & Sync: 252
-- Music Production: 251
-- AI/ML Libraries: 239
-- Data Validation & Serialization: 235
-- Desktop App Frameworks: 234
-- Media Players: 218
-- Date & Time: 216
-- Mobile IDE & Tools: 216
-- Logging & Diagnostics: 211
-- Data Pipelines: 191
+- Static Analysis: 530
+- iOS UI Components: 515
+- Databases: 410
+- CLI Frameworks: 386
+- Image Processing: 337
+- Testing Frameworks: 315
+- Backend Frameworks: 310
+- Container Orchestration: 307
+- Communication: 292
+- Code Editors: 289
+- Networking: 286
+- Frontend Frameworks: 282
+- Data Validation & Serialization: 281
+- Music Production: 278
+- Media Players: 235
+- Video Editing: 229
+- Game Engines: 228
+- Async & Concurrency: 221
+- Version Control: 215
+- API Clients: 212
+- Data Pipelines: 206
+- Logging & Diagnostics: 197
+- Project Management: 196
+- AI/ML Libraries: 195
+- Backup & Sync: 195
+- CI/CD Tools: 195
+- Note Taking: 192
+- Encryption & Privacy Tools: 191
+- Launcher & Productivity Utils: 191
 - Monitoring & Metrics: 191
-- UI/UX Design Tools: 187
-- API Clients: 184
-- Security Scanning: 182
-- Configuration: 176
-- Encryption & Privacy Tools: 172
-- File Managers: 171
-- Project Management: 166
-- Video Editing: 164
-- Web Scraping & Parsing: 163
-- Game Engines: 162
-- Browsers: 156
-- iOS Networking & Data: 154
-- Launcher & Productivity Utils: 152
+- UI/UX Design Tools: 188
+- Configuration: 184
+- Programming Languages: 182
+- Security Scanning: 180
+- Content Management Systems: 175
+- Data Analysis: 172
+- Utilities: 171
+- Accounting & Finance: 162
+- iOS Networking & Data: 155
+- Embedded & IoT: 154
 - System Utilities: 145
-- RSS Readers: 144
-- Documentation Tools: 141
-- Async & Concurrency: 128
-- Programming Languages: 122
-- Version Control: 122
-- Utilities: 121
-- Password Managers: 119
-- Email: 112
-- Statistical Tools: 112
-- Text Processing: 112
-- ORMs: 110
-- Package Managers: 107
-- Fonts & Typography: 103
-- Screen Recording / Streaming: 103
-- Build Tools: 102
-- Embedded & IoT: 102
-- 3D & CAD: 96
-- PDF Tools: 95
-- Real-time Communication: 92
-- Error Handling: 91
-- Content Management Systems: 89
-- Calendar & Scheduling: 85
-- Window Managers: 83
-- Operating Systems: 81
+- Documentation Tools: 144
+- Auth & Identity: 143
+- File Managers: 143
+- PDF Tools: 140
+- Build Tools: 139
+- 3D & CAD: 138
+- Web Scraping & Parsing: 136
+- Package Managers: 135
+- Screen Recording / Streaming: 135
+- Real-time Communication: 134
+- Window Managers: 131
+- Fonts & Typography: 128
+- Office Suites: 122
+- ORMs: 121
+- Search Engines: 121
+- Operating Systems: 117
+- Password Managers: 117
+- Terminal Emulators: 116
+- Email: 113
+- Learning Platforms: 113
+- Text Processing: 113
+- Cloud Storage: 112
+- Scientific Computing: 112
+- Calendar & Scheduling: 96
+- Static Site Generators: 90
+- Photo Management: 85
+- Document Conversion: 83
+- RSS Readers: 81
+- Virtualization: 78
 - Caching: 76
-- Terminal Emulators: 76
+- Cloud SDKs & CLIs: 74
+- Date & Time: 74
+- Clipboard Managers: 73
+- UI Automation & E2E Testing: 73
 - Blockchain & Web3: 72
-- Torrent Clients: 71
-- Scientific Computing: 70
-- Virtualization: 70
-- HR & People: 69
-- Media Processing: 68
-- Learning Platforms: 66
-- Code Coverage & Quality: 65
-- Accounting & Finance: 64
-- Cloud Storage: 63
-- Search Engines: 62
+- Blogging & Newsletter Platforms: 64
+- Code Coverage & Quality: 62
 - Template Engines: 62
-- Static Site Generators: 60
-- Load & Performance Testing: 58
-- Photo Management: 58
+- Error & Exception Tracking: 61
+- Browsers: 60
+- Diagramming & Whiteboard: 59
+- Social Media Clients: 59
+- VPN: 59
 - Database Drivers: 57
-- Office Suites: 54
-- Document Conversion: 53
-- Clipboard Managers: 51
-- Screenshot & Annotation: 48
-- Blogging & Newsletter Platforms: 40
-- API Documentation: 39
-- Diagramming & Whiteboard: 39
-- Error & Exception Tracking: 39
-- CRM & Sales: 37
-- Jupyter & Notebooks: 37
-- Log Management: 33
-- GraphQL Tools: 32
-- Infrastructure as Code: 32
-- Shell Environments: 32
-- Social Media Clients: 32
-- Math & Numerics: 30
-- Image Editors: 29
+- Jupyter & Notebooks: 56
+- GraphQL Tools: 53
+- Load & Performance Testing: 52
+- Torrent Clients: 52
+- Shell Environments: 46
+- Vector & Illustration: 46
+- CRM & Sales: 45
+- Screenshot & Annotation: 45
+- Image Editors: 42
+- File Search & Navigation: 41
+- Log Management: 40
+- API Documentation: 36
+- Infrastructure as Code: 34
+- AI Assistants: 33
+- Math & Numerics: 33
+- Formatters: 32
+- Media Processing: 31
+- Video Conferencing: 31
+- Cross-Platform Frameworks: 30
+- HTTP Libraries: 29
 - Compression & Archiving: 28
-- Formatters: 27
-- Vector & Illustration: 26
-- Video Conferencing: 24
+- APIs & Services: 27
+- Linters: 27
+- Chess: 24
+- LLM Tools: 24
+- Secrets Management: 24
 - Database Migrations: 23
-- LLM Tools: 23
-- Web Frameworks: 20
-- HTTP Libraries: 18
-- APIs & Services: 17
-- Chess: 16
-- Database Tools: 16
-- Vector Databases: 16
-- Linters: 15
-- NLP & Text AI: 15
-- CLI Building: 13
-- Linters & Formatters: 13
-- Secrets Management: 13
-- UI Automation & E2E Testing: 13
-- Flashcards & Study: 12
+- Database Tools: 23
+- Task Runners & Monorepos: 23
+- Error Handling: 22
+- Statistical Tools: 21
+- Vector Databases: 20
+- NLP & Text AI: 17
 - Terminal UI: 12
-- Cross-Platform Frameworks: 11
-- Database ORMs: 11
-- HTTP Clients: 11
-- Mobile Frameworks: 10
-- File Search & Navigation: 8
+- Desktop App Frameworks: 10
+- Flashcards & Study: 10
+- HR & People: 9
+- Mobile IDE & Tools: 8
 
 ## Querying
 Download /api/v1/catalog.json and filter by:

@@ -200,14 +200,70 @@ Define a standard way for agents to interact with main.menu:
 
 ---
 
-## Current Priorities (Updated 2026-03-12)
+## Current Priorities (Updated 2026-03-13)
 
-1. **Agent discoverability** — JSON-LD structured data, `api/v1/catalog.json`, `llms.txt`, semantic HTML. This is the #1 gap: our primary audience (agents) cannot effectively consume the site.
-2. **Design polish** — Search UX (Cmd+K), card redesign with category accents, dark/light toggle. Make it feel like a product, not a prototype.
-3. **Catalog expansion** — Target 500 entries. Add 15 new categories (Build Tools, DevOps, Privacy, API Tools, etc.). Expand 6 thin categories.
-4. **Enhanced metadata** — Add `maintenance_status`, `last_verified`, `license`, `popularity`, `language`, `alternatives` to schema. Backfill gradually.
-5. **Data quality** — URL health checker script, fix skeptic-reported issues (Neofetch archived, Process Explorer ID).
-6. **Monetization exploration** — Affiliate links for paid tools, donation link. Do not compromise editorial independence.
+**Context:** 16,175 entries across 129 categories. Two rounds of categorization fixes have resolved the major quality issues. Tier 3 feedback loop fixed, stop-word filter added, keyword patterns tightened, Networking category added. Categorization quality is now acceptable for most categories.
+
+### COMPLETED: Categorization Quality Fixes (Cycles 5-6)
+
+All major categorization bugs have been resolved:
+- Tier 3 feedback loop (excluded discovered_*.json from category index)
+- AI Assistants: 579 → 33 (keywords added, copilot narrowed to ai-copilot, 0.5x Tier 3 penalty)
+- Cloud SDKs: 558 → 70 (removed broad "cloud" keyword, 0.5x penalty)
+- Task Runners: 344 → 24 (automation rerouted to Project Management, 0.5x penalty)
+- HR & People: 220 → 9 (stop-word filter + 0.3x penalty)
+- VPN: 274 → 58 (networking libs → new Networking category)
+- CI/CD: 275 → 196 (tightened "ci" to "ci.?cd|continuous.?integr")
+- Logging: 274 → 207 (tightened "log" to "logging|log.?manage|logger")
+- Networking: 0 → 285 (new category absorbing Go network/protocol/TCP/UDP libs)
+
+### Priority 1: Thin Categories Need Attention (CURATOR)
+
+These categories are important topics with few entries:
+
+| Category | Count | What's missing |
+|---|---|---|
+| Terminal UI | 12 | Bubble Tea, Ratatui, tview, urwid |
+| Cross-Platform Frameworks | 11 | Expo, Ionic, MAUI |
+| HTTP Libraries | 18 | Correct size — no action needed |
+| NLP & Text AI | 17 | spaCy, NLTK, Hugging Face, CoreNLP |
+| LLM Tools | 23 | LangChain, Ollama, LlamaIndex, Semantic Kernel, CrewAI |
+| Chess | 10 | Lichess mobile, chess24 |
+| HR & People | 9 | Needs manual curation — stop-word penalty means scraper won't fill it |
+
+### Priority 2: Remaining Categorization Issues (CURATOR — medium)
+
+- **Mobile IDE & Tools** (316) — ~30% garbage from Tier 3 "debugging"/"ios" overlap (S26)
+- **Code Editors** (346) — ~10-15% non-editor tools from generic "editor" matching (S22)
+- **Data Analysis** (174) — some iOS animation chart libs routing here (S23)
+
+### Priority 3: Agent Discoverability — What's Left
+
+**Already done:**
+- `api/v1/catalog.json` — 16,175 entries
+- `llms.txt` and `llms-full.txt` — up to date
+- Noscript HTML fallback — 16,175 entries
+- Tree drill-down navigation
+
+**Remaining:**
+- JSON-LD structured data — nice-to-have for search engines
+- Individual entry pages at `api/v1/entry/{id}.json` — nice-to-have
+- Sitemap.xml — low priority until category pages exist
+
+### Priority 4: Design Polish (DESIGNER)
+
+1. **Search UX** — Cmd/Ctrl+K shortcut, result count, search highlighting
+2. **Card redesign** — category-colored left borders for visual scannability
+3. **Dark/light toggle** — persist in localStorage
+4. **Detail panel** — "Similar software" suggestions, copy link button
+5. **Mobile** — visible "Filter by Category" button
+
+### Priority 5: Quality Automation (BUILDER)
+
+- URL health checker (run against curated entries first)
+- Duplicate detection across data files
+- Schema validation
+- Enhanced metadata fields (maintenance_status, last_verified, license, popularity)
 
 ## Deprioritized
 

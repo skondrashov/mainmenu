@@ -265,7 +265,7 @@
     "name": "SQLAlchemy",
     "description": "Python SQL toolkit and ORM. Full power of SQL with flexible object-relational mapping and connection pooling.",
     "url": "https://www.sqlalchemy.org",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -287,7 +287,7 @@
     "name": "Prisma",
     "description": "Next-generation Node.js ORM with auto-generated types, migrations, and a visual database browser (Prisma Studio).",
     "url": "https://www.prisma.io",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -309,7 +309,7 @@
     "name": "GORM",
     "description": "Full-featured ORM for Go. Auto migrations, associations, hooks, and support for MySQL, PostgreSQL, SQLite.",
     "url": "https://gorm.io",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -331,7 +331,7 @@
     "name": "Sequelize",
     "description": "Promise-based Node.js ORM for PostgreSQL, MySQL, MariaDB, SQLite, and SQL Server. Migrations and eager loading.",
     "url": "https://sequelize.org",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -353,7 +353,7 @@
     "name": "TypeORM",
     "description": "TypeScript ORM for Node.js supporting Active Record and Data Mapper patterns. Works with most SQL databases.",
     "url": "https://typeorm.io",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -375,7 +375,7 @@
     "name": "Diesel",
     "description": "Safe, extensible ORM and query builder for Rust. Compile-time checked queries and zero-cost abstractions.",
     "url": "https://diesel.rs",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -397,7 +397,7 @@
     "name": "Drizzle ORM",
     "description": "Lightweight TypeScript ORM with a SQL-like query builder. Serverless-ready with zero dependencies and type safety.",
     "url": "https://orm.drizzle.team",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -419,7 +419,7 @@
     "name": "SeaORM",
     "description": "Async and dynamic ORM for Rust. Supports MySQL, PostgreSQL, and SQLite with compile-time checked queries.",
     "url": "https://www.sea-ql.org/SeaORM",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -441,7 +441,7 @@
     "name": "jOOQ",
     "description": "Java ORM that generates typesafe SQL queries from your database schema. Embraces SQL rather than hiding it.",
     "url": "https://www.jooq.org",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -463,7 +463,7 @@
     "name": "Exposed",
     "description": "Kotlin SQL framework with two flavors: typesafe DSL and lightweight DAO. Built by JetBrains for Kotlin-first development.",
     "url": "https://github.com/JetBrains/Exposed",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",
@@ -485,7 +485,7 @@
     "name": "Django ORM",
     "description": "Built-in ORM for Django. Defines models as Python classes with migrations, querysets, and admin interface generation.",
     "url": "https://docs.djangoproject.com/en/stable/topics/db",
-    "category": "Database ORMs",
+    "category": "ORMs",
     "os": [
       "windows",
       "macos",

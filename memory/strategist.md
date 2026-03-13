@@ -1,5 +1,43 @@
 # Strategist Memory
 
+## Session 2026-03-13
+
+### State at start of session
+- 16,337 entries across 128 categories after overnight scrape (was 290 entries, 42 categories)
+- Taxonomy restructured to task-based: 22 top-level groups, 3-level tree — correct and good
+- Builder completed: api/v1/catalog.json, llms.txt, llms-full.txt, noscript fallback, tree UI
+- Critical problem discovered: categorization quality is broken for 4 high-visibility categories
+
+### Key findings from data analysis
+- AI Assistants: 95% error rate (564/579 entries are NOT AI assistants). Root cause: no AI keyword routing in KEYWORD_TO_CATEGORY; Tier 3 index is poisoned by macOS apps + iOS Swift libraries from previous scrape
+- Cloud SDKs & CLIs: 76% error rate (420/544 wrong). Root cause: `"cloud"` keyword too broad in KEYWORD_TO_CATEGORY
+- Task Runners & Monorepos: 82% error rate (270/329 wrong). Root cause: `"task"`, `"cli"` keywords too broad
+- Static Analysis: 26% error rate (140/526 wrong). Acceptable but has `r".*"` catch-all
+- VPN: 107/243 entries are networking libraries (Go ARP/DHCP/DNS packages). Need Networking category.
+- Tier 3 feedback loop: build_category_index() includes discovered_*.json files, creating a self-reinforcing miscategorization cycle
+
+### Decisions made
+1. Priority 1: Fix Tier 3 feedback loop (exclude discovered_*.json from category index) — builder task
+2. Priority 2: Fix keyword routing for 4 broken categories — curator task
+3. Priority 3: Re-scrape + skeptic spot-check after fixes
+4. Priority 4: Add Networking category to taxonomy
+5. Deprioritize: enhanced metadata, URL health checker, monetization — premature at current quality level
+6. JSON-LD structured data demoted to "nice-to-have" — api + llms.txt already serve agents
+
+### What's good (don't change)
+- Taxonomy structure (128 categories, 22 groups, 3-level tree) — correct
+- Mobile IDE & Tools: 97% accurate
+- Static Analysis: 74% accurate — acceptable
+- iOS UI Components: mostly correct
+- HTTP Libraries, CLI Building, LLM Tools: correct but thin
+
+### Specific code changes to recommend
+- scrape/categorize.py: exclude discovered_*.json from build_category_index()
+- scrape/categorize.py: add AI Assistants keywords (ai-assistant, chatbot, llm-client, copilot)
+- scrape/categorize.py: remove "cloud" from KEYWORD_TO_CATEGORY, narrow task/cli keywords
+- scrape/categorize.py: add Tier 3 penalty for AI Assistants and Cloud SDKs
+- scrape/sources/awesome_registry.py: route networking libs to Networking not VPN
+
 ## Session 2026-03-12
 
 ### State at start of session

@@ -19,7 +19,7 @@ VALID_PRICING = ["free", "freemium", "paid", "subscription"]
 VALID_LANGUAGES = [
     "python", "javascript", "typescript", "rust", "go", "c", "cpp", "java",
     "ruby", "php", "swift", "kotlin", "csharp", "dart", "elixir", "r",
-    "julia", "lua", "zig", "haskell", "scala", "shell", "multi"
+    "julia", "lua", "zig", "haskell", "scala", "shell", "perl", "multi"
 ]
 
 # Map GitHub language names to our schema enum
@@ -30,6 +30,7 @@ LANGUAGE_MAP = {
     "kotlin": "kotlin", "dart": "dart", "elixir": "elixir", "r": "r",
     "julia": "julia", "lua": "lua", "zig": "zig", "haskell": "haskell",
     "scala": "scala", "shell": "shell", "bash": "shell", "powershell": "shell",
+    "perl": "perl",
 }
 
 def get_all_categories():

@@ -11,6 +11,7 @@ You manage the agent team. Spawn agents, read their output, decide what to run n
 | **designer** | designer.md | UX improvements, visual polish |
 | **strategist** | strategist.md | Direction, priorities, what to build next |
 | **skeptic** | skeptic.md | Review work, challenge assumptions, verify quality |
+| **librarian** | librarian.md | Clean forum, maintain docs and memory, process context feedback |
 
 # The Loop
 
@@ -32,7 +33,8 @@ Ask in this order:
 3. **Do we know what to build next?** → if no, strategist. If yes, builder.
 4. **Is the UX bad?** → designer
 5. **Has a lot happened since last review?** → skeptic
-6. **Nothing urgent?** → curator (always more entries to add)
+6. **Is the forum getting long or docs stale?** → librarian
+7. **Nothing urgent?** → curator (always more entries to add)
 
 # Sequencing Rules
 

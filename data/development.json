@@ -914,7 +914,7 @@
     "name": "React",
     "description": "Meta's JavaScript library for building user interfaces with a component model and virtual DOM.",
     "url": "https://react.dev",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -935,7 +935,7 @@
     "name": "Next.js",
     "description": "React framework by Vercel with server-side rendering, static generation, API routes, and App Router.",
     "url": "https://nextjs.org",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -956,7 +956,7 @@
     "name": "Django",
     "description": "Batteries-included Python web framework. ORM, admin panel, authentication, and security built in.",
     "url": "https://www.djangoproject.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -977,7 +977,7 @@
     "name": "Ruby on Rails",
     "description": "Convention-over-configuration web framework in Ruby. Pioneered modern web development patterns.",
     "url": "https://rubyonrails.org",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -998,7 +998,7 @@
     "name": "Vue.js",
     "description": "Progressive JavaScript framework for building UIs. Approachable, performant, and versatile.",
     "url": "https://vuejs.org",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -1019,7 +1019,7 @@
     "name": "Svelte",
     "description": "Compiler-based frontend framework that shifts work to build time. No virtual DOM, minimal runtime overhead.",
     "url": "https://svelte.dev",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -1040,7 +1040,7 @@
     "name": "FastAPI",
     "description": "Modern Python web framework for building APIs. Async, type-hint-driven, auto-generated OpenAPI docs.",
     "url": "https://fastapi.tiangolo.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -1061,7 +1061,7 @@
     "name": "Express.js",
     "description": "Minimal, unopinionated Node.js web framework. The de facto standard for Node.js HTTP servers.",
     "url": "https://expressjs.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -1083,9 +1083,18 @@
     "description": "Google's conversational AI assistant. Integrates with Google Workspace, Search, and multimodal understanding.",
     "url": "https://gemini.google.com",
     "category": "AI Assistants",
-    "os": ["web", "ios", "android"],
+    "os": [
+      "web",
+      "ios",
+      "android"
+    ],
     "pricing": "freemium",
-    "tags": ["google", "multimodal", "chat", "workspace-integration"]
+    "tags": [
+      "google",
+      "multimodal",
+      "chat",
+      "workspace-integration"
+    ]
   },
   {
     "id": "codeium",
@@ -1093,9 +1102,18 @@
     "description": "Free AI code completion and chat for 70+ languages. Extensions for VS Code, JetBrains, Vim, and more.",
     "url": "https://codeium.com",
     "category": "AI Assistants",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "freemium",
-    "tags": ["ai", "autocomplete", "free", "editor-extension"]
+    "tags": [
+      "ai",
+      "autocomplete",
+      "free",
+      "editor-extension"
+    ]
   },
   {
     "id": "tabnine",
@@ -1103,9 +1121,18 @@
     "description": "AI code assistant with whole-line and full-function completions. Supports private models for enterprise use.",
     "url": "https://www.tabnine.com",
     "category": "AI Assistants",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "freemium",
-    "tags": ["ai", "autocomplete", "private-models", "editor-extension"]
+    "tags": [
+      "ai",
+      "autocomplete",
+      "private-models",
+      "editor-extension"
+    ]
   },
   {
     "id": "amazon-q",
@@ -1113,9 +1140,18 @@
     "description": "AWS AI coding assistant with code generation, transformation, and security scanning integrated into IDEs.",
     "url": "https://aws.amazon.com/q/developer",
     "category": "AI Assistants",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "freemium",
-    "tags": ["aws", "ai", "coding", "security-scanning"]
+    "tags": [
+      "aws",
+      "ai",
+      "coding",
+      "security-scanning"
+    ]
   },
   {
     "id": "phaser",
@@ -1123,9 +1159,19 @@
     "description": "Fast, free HTML5 game framework for making 2D games that run in the browser with Canvas and WebGL.",
     "url": "https://phaser.io",
     "category": "Game Engines",
-    "os": ["windows", "macos", "linux", "web"],
+    "os": [
+      "windows",
+      "macos",
+      "linux",
+      "web"
+    ],
     "pricing": "free",
-    "tags": ["gamedev", "html5", "2d", "open-source"],
+    "tags": [
+      "gamedev",
+      "html5",
+      "2d",
+      "open-source"
+    ],
     "source": "https://github.com/phaserjs/phaser",
     "language": "javascript"
   },
@@ -1135,9 +1181,18 @@
     "description": "Visual novel engine used by thousands of games. Python-based scripting with built-in save/load and rollback.",
     "url": "https://www.renpy.org",
     "category": "Game Engines",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "free",
-    "tags": ["gamedev", "visual-novel", "python", "open-source"],
+    "tags": [
+      "gamedev",
+      "visual-novel",
+      "python",
+      "open-source"
+    ],
     "source": "https://github.com/renpy/renpy",
     "language": "python"
   },
@@ -1147,9 +1202,16 @@
     "description": "Open-source C# game engine with a visual editor, PBR rendering, and VR support. Formerly Xenko.",
     "url": "https://www.stride3d.net",
     "category": "Game Engines",
-    "os": ["windows"],
+    "os": [
+      "windows"
+    ],
     "pricing": "free",
-    "tags": ["gamedev", "csharp", "3d", "open-source"],
+    "tags": [
+      "gamedev",
+      "csharp",
+      "3d",
+      "open-source"
+    ],
     "source": "https://github.com/stride3d/stride",
     "language": "csharp"
   },
@@ -1159,9 +1221,18 @@
     "description": "Distributed version control with built-in wiki, bug tracker, and web interface in a single executable.",
     "url": "https://fossil-scm.org",
     "category": "Version Control",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "free",
-    "tags": ["dvcs", "all-in-one", "wiki", "open-source"],
+    "tags": [
+      "dvcs",
+      "all-in-one",
+      "wiki",
+      "open-source"
+    ],
     "source": "https://fossil-scm.org/home/dir?ci=trunk"
   },
   {
@@ -1170,9 +1241,18 @@
     "description": "Distributed version control system focused on ease of use and performance. Written in Python.",
     "url": "https://www.mercurial-scm.org",
     "category": "Version Control",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "free",
-    "tags": ["dvcs", "python", "easy-to-use", "open-source"],
+    "tags": [
+      "dvcs",
+      "python",
+      "easy-to-use",
+      "open-source"
+    ],
     "source": "https://www.mercurial-scm.org/repo/hg"
   },
   {
@@ -1181,9 +1261,18 @@
     "description": "Git-compatible VCS with first-class conflicts, operation log, and automatic rebasing. Built by Googlers.",
     "url": "https://martinvonz.github.io/jj",
     "category": "Version Control",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "free",
-    "tags": ["dvcs", "git-compatible", "modern", "open-source"],
+    "tags": [
+      "dvcs",
+      "git-compatible",
+      "modern",
+      "open-source"
+    ],
     "source": "https://github.com/martinvonz/jj",
     "language": "rust"
   },
@@ -1193,9 +1282,19 @@
     "description": "Lightweight database management in a single PHP file. Supports MySQL, PostgreSQL, SQLite, and more.",
     "url": "https://www.adminer.org",
     "category": "Database Tools",
-    "os": ["windows", "macos", "linux", "web"],
+    "os": [
+      "windows",
+      "macos",
+      "linux",
+      "web"
+    ],
     "pricing": "free",
-    "tags": ["lightweight", "single-file", "multi-database", "open-source"],
+    "tags": [
+      "lightweight",
+      "single-file",
+      "multi-database",
+      "open-source"
+    ],
     "source": "https://github.com/vrana/adminer",
     "language": "php"
   },
@@ -1205,9 +1304,18 @@
     "description": "Universal database client with SQL editor, visual query builder, ER diagrams, and data export tools.",
     "url": "https://www.dbvis.com",
     "category": "Database Tools",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "freemium",
-    "tags": ["sql", "universal", "er-diagrams", "visual-query"]
+    "tags": [
+      "sql",
+      "universal",
+      "er-diagrams",
+      "visual-query"
+    ]
   },
   {
     "id": "azure-data-studio",
@@ -1215,9 +1323,18 @@
     "description": "Cross-platform database tool by Microsoft for SQL Server and Azure databases. Notebooks, extensions, and modern UI.",
     "url": "https://learn.microsoft.com/en-us/azure-data-studio",
     "category": "Database Tools",
-    "os": ["windows", "macos", "linux"],
+    "os": [
+      "windows",
+      "macos",
+      "linux"
+    ],
     "pricing": "free",
-    "tags": ["microsoft", "sql-server", "azure", "open-source"],
+    "tags": [
+      "microsoft",
+      "sql-server",
+      "azure",
+      "open-source"
+    ],
     "source": "https://github.com/microsoft/azuredatastudio"
   }
 ]

@@ -1,5 +1,7 @@
 # Main Menu
 
+If told to go, start, or begin — you are the **orchestrator**. See `agents/orchestrator.md`.
+
 For agent startup protocol, communication rules, and forum voting, see `PROTOCOL.md`.
 
 ## Overview
@@ -38,9 +40,10 @@ Each entry has: `id` (kebab-case), `name`, `description` (~200 chars), `url`, `c
 
 ## Current State
 
-- 16,337 entries across 128 categories in 22 top-level groups
+- 15,555 entries across 129 categories in 22 top-level groups
 - Tree drill-down navigation (taxonomy.json → taxonomy.js)
-- Warm amber color scheme, dark theme
+- Warm amber color scheme, dark theme, category-colored card borders
+- Cmd/Ctrl+K search shortcut, live result count
 - Search across names, descriptions, categories, tags
 - OS filtering, sort by category/A-Z/shuffle
 - Detail panel with website + source code links
@@ -71,7 +74,8 @@ Each entry has: `id` (kebab-case), `name`, `description` (~200 chars), `url`, `c
 
 ## Recent Major Changes (2026-03-13)
 
-- **Taxonomy restructure**: 105 → 128 categories. Split Web Frameworks (Frontend/Backend/Template Engines), Mobile Frameworks (iOS/Android/Cross-Platform), Database ORMs (ORMs/Drivers/Migrations/Caching), Linters & Formatters (Static Analysis/Linters/Formatters). Added Blockchain & Web3, Text Processing, Configuration, Terminal UI, NLP & Text AI, LLM Tools, Math & Numerics, Compression & Archiving.
-- **Categorizer fixes**: Removed overly broad keywords (http, api, log, search, mobile). Added Utilities penalty in Tier 3 scoring. Normalized Tier 3 by category size (sqrt normalization).
-- **Section map fixes**: Fixed catch-all `r".*"` patterns in awesome-static-analysis and awesome-android-ui. Narrowed HTTP routing. Split database routing. Added blockchain exclusion before AI patterns. Routed iOS entries to iOS UI Components / iOS Networking & Data.
-- **Re-scrape**: 15,191 new entries from clean categorization. Utilities: 121 (was 3,313). HTTP Libraries: 18 (was 581 as HTTP Clients).
+- **Taxonomy restructure**: 105 → 129 categories. Added Networking, Blockchain & Web3, Text Processing, Configuration, Terminal UI, NLP & Text AI, LLM Tools, Math & Numerics, Compression & Archiving.
+- **Categorizer hardening**: 3 rounds of fixes. Stop-word filter, Tier 3 penalties for 10 categories, Tier 3 exclusions for Desktop App Frameworks and Mobile IDE & Tools, confidence threshold at 0.15. Tightened 30+ section map patterns (log→logging, ci→ci.?cd, date→date.?time, editor→text.?editor, gui→gui.?framework, etc.). Narrowed 6 overly broad keywords (editor, browser, launcher, date, copilot, proxy).
+- **Networking category**: New category absorbing Go networking libraries from VPN. VPN: 274→59, Networking: 0→286.
+- **Design UX**: Cmd/Ctrl+K search shortcut, live result count, category-colored card borders (22 group colors from taxonomy).
+- **Re-scrape totals**: 14,409 discovered entries + 1,146 curated = 15,555 total.

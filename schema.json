@@ -18,7 +18,7 @@
     "source": { "type": "string", "format": "uri" },
     "language": {
       "type": "string",
-      "enum": ["python", "javascript", "typescript", "rust", "go", "c", "cpp", "java", "ruby", "php", "swift", "kotlin", "csharp", "dart", "elixir", "r", "julia", "lua", "zig", "haskell", "scala", "shell", "multi"]
+      "enum": ["python", "javascript", "typescript", "rust", "go", "c", "cpp", "java", "ruby", "php", "swift", "kotlin", "csharp", "dart", "elixir", "r", "julia", "lua", "zig", "haskell", "scala", "shell", "perl", "multi"]
     }
   }
 }

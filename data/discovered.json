@@ -412,7 +412,7 @@
     "name": "mcp2cli",
     "description": "Turn any MCP server or OpenAPI spec into a CLI at runtime. Reduces token usage by 96-99% compared to native MCP tool schemas.",
     "url": "https://github.com/knowsuchagency/mcp2cli",
-    "category": "CLI Building",
+    "category": "CLI Frameworks",
     "os": ["windows", "macos", "linux"],
     "pricing": "free",
     "tags": ["mcp", "cli", "openapi", "token-optimization", "ai-tools", "crawl-discovered"],

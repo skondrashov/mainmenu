@@ -4,7 +4,7 @@
     "name": "Requests",
     "description": "Simple, elegant HTTP library for Python. The de facto standard for making HTTP calls with a clean API.",
     "url": "https://docs.python-requests.org",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -25,7 +25,7 @@
     "name": "HTTPX",
     "description": "Async-capable HTTP client for Python. Drop-in requests replacement with HTTP/2, connection pooling, and streaming.",
     "url": "https://www.python-httpx.org",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -47,7 +47,7 @@
     "name": "Axios",
     "description": "Promise-based HTTP client for browser and Node.js. Interceptors, automatic JSON transforms, and cancellation.",
     "url": "https://axios-http.com",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -69,7 +69,7 @@
     "name": "reqwest",
     "description": "Ergonomic async HTTP client for Rust. TLS, cookies, JSON, multipart uploads, and connection pooling built in.",
     "url": "https://docs.rs/reqwest",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -91,7 +91,7 @@
     "name": "curl",
     "description": "Command-line tool for transferring data with URLs. Supports HTTP, FTP, and dozens of other protocols.",
     "url": "https://curl.se",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -112,7 +112,7 @@
     "name": "Wget",
     "description": "Non-interactive network downloader. Recursive downloads, retry on failure, and background operation.",
     "url": "https://www.gnu.org/software/wget",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -133,7 +133,7 @@
     "name": "Got",
     "description": "Human-friendly HTTP request library for Node.js. Supports retries, streams, pagination, and HTTP/2.",
     "url": "https://github.com/sindresorhus/got",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -154,7 +154,7 @@
     "name": "Ky",
     "description": "Tiny HTTP client based on the Fetch API for browsers and Deno. Retries, JSON shortcuts, and timeout handling.",
     "url": "https://github.com/sindresorhus/ky",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -176,7 +176,7 @@
     "name": "Undici",
     "description": "High-performance HTTP/1.1 client for Node.js. Written from scratch, powers Node.js built-in fetch implementation.",
     "url": "https://undici.nodejs.org",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -197,7 +197,7 @@
     "name": "OkHttp",
     "description": "Efficient HTTP and HTTP/2 client for Java and Kotlin. Connection pooling, transparent GZIP, and response caching.",
     "url": "https://square.github.io/okhttp",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -219,7 +219,7 @@
     "name": "Retrofit",
     "description": "Type-safe REST client for Java and Kotlin by Square. Turns HTTP APIs into Java interfaces with annotation-based config.",
     "url": "https://square.github.io/retrofit",
-    "category": "HTTP Clients",
+    "category": "HTTP Libraries",
     "os": [
       "windows",
       "macos",
@@ -455,7 +455,7 @@
     "name": "Flask",
     "description": "Lightweight Python web microframework. Minimal core with extensions for forms, auth, databases, and more.",
     "url": "https://flask.palletsprojects.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -476,7 +476,7 @@
     "name": "Axum",
     "description": "Ergonomic Rust web framework built on Tokio and Tower. Type-safe extractors, middleware, and composable routing.",
     "url": "https://docs.rs/axum",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -498,7 +498,7 @@
     "name": "Gin",
     "description": "High-performance HTTP web framework for Go. Martini-like API with up to 40x faster performance. Middleware support.",
     "url": "https://gin-gonic.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -520,7 +520,7 @@
     "name": "Echo",
     "description": "High-performance, minimalist Go web framework. Built-in middleware, data binding, and HTTP/2 support.",
     "url": "https://echo.labstack.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -542,7 +542,7 @@
     "name": "Fiber",
     "description": "Express.js-inspired Go web framework built on fasthttp. Optimized for speed and low memory footprint.",
     "url": "https://gofiber.io",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -564,7 +564,7 @@
     "name": "chi",
     "description": "Lightweight, composable Go HTTP router. Built on net/http, supports middleware, and context-based routing.",
     "url": "https://go-chi.io",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -586,7 +586,7 @@
     "name": "Remix",
     "description": "Full-stack React framework focused on web standards. Nested routes, progressive enhancement, and server-side rendering.",
     "url": "https://remix.run",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -608,7 +608,7 @@
     "name": "Nuxt",
     "description": "Full-stack Vue.js framework with server-side rendering, auto-imports, file-based routing, and data fetching built in.",
     "url": "https://nuxt.com",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -630,7 +630,7 @@
     "name": "SolidJS",
     "description": "Reactive JavaScript framework with fine-grained reactivity and no virtual DOM. Compiles to efficient vanilla JS.",
     "url": "https://www.solidjs.com",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -652,7 +652,7 @@
     "name": "Hono",
     "description": "Ultrafast web framework for the edge. Runs on Cloudflare Workers, Deno, Bun, Fastly, and Node.js.",
     "url": "https://hono.dev",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -674,7 +674,7 @@
     "name": "Elysia",
     "description": "TypeScript web framework optimized for Bun. End-to-end type safety, high throughput, and ergonomic API design.",
     "url": "https://elysiajs.com",
-    "category": "Web Frameworks",
+    "category": "Backend Frameworks",
     "os": [
       "windows",
       "macos",
@@ -696,7 +696,7 @@
     "name": "Fresh",
     "description": "Next-gen web framework for Deno. Island-based architecture with zero JS shipped to the client by default.",
     "url": "https://fresh.deno.dev",
-    "category": "Web Frameworks",
+    "category": "Frontend Frameworks",
     "os": [
       "windows",
       "macos",

@@ -207,6 +207,7 @@
         { "name": "Messaging & Chat", "categories": ["Communication"] },
         { "name": "Email", "categories": ["Email"] },
         { "name": "VPN", "categories": ["VPN"] },
+        { "name": "Networking", "categories": ["Networking"] },
         { "name": "Torrents", "categories": ["Torrent Clients"] },
         { "name": "RSS Readers", "categories": ["RSS Readers"] },
         { "name": "Social Media", "categories": ["Social Media Clients"] },
